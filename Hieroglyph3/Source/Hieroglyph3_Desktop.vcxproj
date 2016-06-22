@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Animation\Animation.cpp" />
+    <ClCompile Include="Application\Application.cpp" />
+    <ClCompile Include="Application\ConsoleWindow.cpp" />
+    <ClCompile Include="Application\FileLoader.cpp" />
+    <ClCompile Include="Application\FileSystem.cpp" />
+    <ClCompile Include="Application\main.cpp" />
+    <ClCompile Include="Application\RenderApplication.cpp" />
+    <ClCompile Include="Application\RenderWindow.cpp" />
+    <ClCompile Include="Application\SingleWindowGlyphlet.cpp" />
+    <ClCompile Include="Application\Win32RenderWindow.cpp" />
+    <ClCompile Include="Events\EventManager.cpp" />
+    <ClCompile Include="Events\EvtChar.cpp" />
+    <ClCompile Include="Events\EvtErrorMessage.cpp" />
+    <ClCompile Include="Events\EvtFrameStart.cpp" />
+    <ClCompile Include="Events\EvtInfoMessage.cpp" />
+    <ClCompile Include="Events\EvtKeyboardMsg.cpp" />
+    <ClCompile Include="Events\EvtKeyDown.cpp" />
+    <ClCompile Include="Events\EvtKeyUp.cpp" />
+    <ClCompile Include="Events\EvtMouseLButtonDown.cpp" />
+    <ClCompile Include="Events\EvtMouseLButtonUp.cpp" />
+    <ClCompile Include="Events\EvtMouseLeave.cpp" />
+    <ClCompile Include="Events\EvtMouseMButtonDown.cpp" />
+    <ClCompile Include="Events\EvtMouseMButtonUp.cpp" />
+    <ClCompile Include="Events\EvtMouseMove.cpp" />
+    <ClCompile Include="Events\EvtMouseMsg.cpp" />
+    <ClCompile Include="Events\EvtMouseRButtonDown.cpp" />
+    <ClCompile Include="Events\EvtMouseRButtonUp.cpp" />
+    <ClCompile Include="Events\EvtMouseWheel.cpp" />
+    <ClCompile Include="Events\EvtWindowMsg.cpp" />
+    <ClCompile Include="Events\EvtWindowResize.cpp" />
+    <ClCompile Include="Events\IEventListener.cpp" />
+    <ClCompile Include="Geometry\Box3f.cpp" />
+    <ClCompile Include="Geometry\CompositeShape.cpp" />
+    <ClCompile Include="Geometry\Cone3f.cpp" />
+    <ClCompile Include="Geometry\Frustum3f.cpp" />
+    <ClCompile Include="Geometry\LineIndices.cpp" />
+    <ClCompile Include="Geometry\Plane3f.cpp" />
+    <ClCompile Include="Geometry\PointIndices.cpp" />
+    <ClCompile Include="Geometry\Ray3f.cpp" />
+    <ClCompile Include="Geometry\Shape3D.cpp" />
+    <ClCompile Include="Geometry\Sphere3f.cpp" />
+    <ClCompile Include="Geometry\Triangle3f.cpp" />
+    <ClCompile Include="Geometry\TriangleIndices.cpp" />
+    <ClCompile Include="Intersection\Intersector.cpp" />
+    <ClCompile Include="Intersection\IntrRay3fBox3f.cpp" />
+    <ClCompile Include="Intersection\IntrRay3fSphere3f.cpp" />
+    <ClCompile Include="Mathematics\Matrix3f.cpp" />
+    <ClCompile Include="Mathematics\Matrix4f.cpp" />
+    <ClCompile Include="Mathematics\PerlinNoise.cpp" />
+    <ClCompile Include="Mathematics\Vector2f.cpp" />
+    <ClCompile Include="Mathematics\Vector3f.cpp" />
+    <ClCompile Include="Mathematics\Vector4f.cpp" />
+    <ClCompile Include="Objects\Actor.cpp" />
+    <ClCompile Include="Objects\ActorGenerator.cpp" />
+    <ClCompile Include="Objects\BoundsVisualizerActor.cpp" />
+    <ClCompile Include="Objects\Camera.cpp" />
+    <ClCompile Include="Objects\ConsoleActor.cpp" />
+    <ClCompile Include="Objects\Entity3D.cpp" />
+    <ClCompile Include="Objects\FirstPersonCamera.cpp" />
+    <ClCompile Include="Objects\FullscreenActor.cpp" />
+    <ClCompile Include="Objects\GeometryActor.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+    </ClCompile>
+    <ClCompile Include="Objects\GlyphletActor.cpp" />
+    <ClCompile Include="Objects\Light.cpp" />
+    <ClCompile Include="Objects\Node3D.cpp" />
+    <ClCompile Include="Objects\ObjectSpaceCameraPositionWriter.cpp" />
+    <ClCompile Include="Objects\PickRecord.cpp" />
+    <ClCompile Include="Objects\PointLight.cpp" />
+    <ClCompile Include="Objects\Scene.cpp" />
+    <ClCompile Include="Objects\SceneGraph.cpp" />
+    <ClCompile Include="Objects\SkinnedActor.cpp" />
+    <ClCompile Include="Objects\SkyboxActor.cpp" />
+    <ClCompile Include="Objects\TextActor.cpp" />
+    <ClCompile Include="Objects\TextureActor.cpp" />
+    <ClCompile Include="Objects\TextureSpaceCameraPositionWriter.cpp" />
+    <ClCompile Include="Objects\TextureSpaceLightPositionWriter.cpp" />
+    <ClCompile Include="Objects\Transform3D.cpp" />
+    <ClCompile Include="Objects\VolumeActor.cpp" />
+    <ClCompile Include="Rendering\BasicVertexDX11.cpp" />
+    <ClCompile Include="Rendering\BlendStateConfigDX11.cpp" />
+    <ClCompile Include="Rendering\BufferConfigDX11.cpp" />
+    <ClCompile Include="Rendering\BufferDX11.cpp" />
+    <ClCompile Include="Rendering\ByteAddressBufferDX11.cpp" />
+    <ClCompile Include="Rendering\CommandListDX11.cpp" />
+    <ClCompile Include="Rendering\ComputeShaderDX11.cpp" />
+    <ClCompile Include="Rendering\ComputeStageDX11.cpp" />
+    <ClCompile Include="Rendering\ConstantBufferDX11.cpp" />
+    <ClCompile Include="Rendering\ConstantBufferParameterDX11.cpp" />
+    <ClCompile Include="Rendering\ConstantBufferParameterWriterDX11.cpp" />
+    <ClCompile Include="Rendering\D3DEnumConversion.cpp" />
+    <ClCompile Include="Rendering\DepthStencilStateConfigDX11.cpp" />
+    <ClCompile Include="Rendering\DepthStencilViewConfigDX11.cpp" />
+    <ClCompile Include="Rendering\DepthStencilViewDX11.cpp" />
+    <ClCompile Include="Rendering\DomainShaderDX11.cpp" />
+    <ClCompile Include="Rendering\DomainStageDX11.cpp" />
+    <ClCompile Include="Rendering\DXGIAdapter.cpp" />
+    <ClCompile Include="Rendering\DXGIOutput.cpp" />
+    <ClCompile Include="Rendering\GeometryDX11.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+    </ClCompile>
+    <ClCompile Include="Rendering\GeometryGeneratorDX11.cpp" />
+    <ClCompile Include="Rendering\GeometryLoaderDX11.cpp" />
+    <ClCompile Include="Rendering\GeometryShaderDX11.cpp" />
+    <ClCompile Include="Rendering\GeometryStageDX11.cpp" />
+    <ClCompile Include="Rendering\HullShaderDX11.cpp" />
+    <ClCompile Include="Rendering\HullStageDX11.cpp" />
+    <ClCompile Include="Rendering\IndexBufferDX11.cpp" />
+    <ClCompile Include="Rendering\IndirectArgsBufferDX11.cpp" />
+    <ClCompile Include="Rendering\InputAssemblerStageDX11.cpp" />
+    <ClCompile Include="Rendering\InputAssemblerStateDX11.cpp" />
+    <ClCompile Include="Rendering\MaterialDX11.cpp" />
+    <ClCompile Include="Rendering\MaterialGeneratorDX11.cpp" />
+    <ClCompile Include="Rendering\MaterialManager.cpp" />
+    <ClCompile Include="Rendering\MaterialTemplate.cpp" />
+    <ClCompile Include="Rendering\MatrixArrayParameterDX11.cpp" />
+    <ClCompile Include="Rendering\MatrixArrayParameterWriterDX11.cpp" />
+    <ClCompile Include="Rendering\MatrixParameterDX11.cpp" />
+    <ClCompile Include="Rendering\MatrixParameterWriterDX11.cpp" />
+    <ClCompile Include="Rendering\MultiExecutorDX11.cpp" />
+    <ClCompile Include="Rendering\OutputMergerStageDX11.cpp" />
+    <ClCompile Include="Rendering\OutputMergerStageStateDX11.cpp" />
+    <ClCompile Include="Rendering\ParameterContainer.cpp" />
+    <ClCompile Include="Rendering\ParameterManagerDX11.cpp" />
+    <ClCompile Include="Rendering\ParameterWriter.cpp" />
+    <ClCompile Include="Rendering\PipelineExecutorDX11.cpp" />
+    <ClCompile Include="Rendering\PipelineManagerDX11.cpp" />
+    <ClCompile Include="Rendering\PixelShaderDX11.cpp" />
+    <ClCompile Include="Rendering\PixelStageDX11.cpp" />
+    <ClCompile Include="Rendering\RasterizerStageDX11.cpp" />
+    <ClCompile Include="Rendering\RasterizerStageStateDX11.cpp" />
+    <ClCompile Include="Rendering\RasterizerStateConfigDX11.cpp" />
+    <ClCompile Include="Rendering\Renderable.cpp" />
+    <ClCompile Include="Rendering\RenderEffectDX11.cpp" />
+    <ClCompile Include="Rendering\RendererDX11.cpp" />
+    <ClCompile Include="Rendering\RenderParameterDX11.cpp" />
+    <ClCompile Include="Rendering\RenderTargetViewConfigDX11.cpp" />
+    <ClCompile Include="Rendering\RenderTargetViewDX11.cpp" />
+    <ClCompile Include="Rendering\ResourceDX11.cpp" />
+    <ClCompile Include="Rendering\ResourceProxyDX11.cpp" />
+    <ClCompile Include="Rendering\SamplerParameterDX11.cpp" />
+    <ClCompile Include="Rendering\SamplerParameterWriterDX11.cpp" />
+    <ClCompile Include="Rendering\SamplerStateConfigDX11.cpp" />
+    <ClCompile Include="Rendering\SceneRenderTask.cpp" />
+    <ClCompile Include="Rendering\ShaderDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderFactoryDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderReflectionDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderReflectionFactoryDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderResourceParameterDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderResourceParameterWriterDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderResourceViewConfigDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderResourceViewDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderStageDX11.cpp" />
+    <ClCompile Include="Rendering\ShaderStageStateDX11.cpp" />
+    <ClCompile Include="Rendering\SpriteFontDX11.cpp" />
+    <ClCompile Include="Rendering\SpriteFontLoaderDX11.cpp" />
+    <ClCompile Include="Rendering\SpriteRendererDX11.cpp" />
+    <ClCompile Include="Rendering\SpriteVertexDX11.cpp" />
+    <ClCompile Include="Rendering\StreamOutputStageDX11.cpp" />
+    <ClCompile Include="Rendering\StreamOutputStageStateDX11.cpp" />
+    <ClCompile Include="Rendering\StructuredBufferDX11.cpp" />
+    <ClCompile Include="Rendering\SwapChainConfigDX11.cpp" />
+    <ClCompile Include="Rendering\SwapChainDX11.cpp" />
+    <ClCompile Include="Rendering\Task.cpp" />
+    <ClCompile Include="Rendering\Texture1dConfigDX11.cpp" />
+    <ClCompile Include="Rendering\Texture1dDX11.cpp" />
+    <ClCompile Include="Rendering\Texture2dConfigDX11.cpp" />
+    <ClCompile Include="Rendering\Texture2dDX11.cpp" />
+    <ClCompile Include="Rendering\Texture3dConfigDX11.cpp" />
+    <ClCompile Include="Rendering\Texture3dDX11.cpp" />
+    <ClCompile Include="Rendering\TexturedVertex.cpp" />
+    <ClCompile Include="Rendering\UnorderedAccessParameterDX11.cpp" />
+    <ClCompile Include="Rendering\UnorderedAccessParameterWriterDX11.cpp" />
+    <ClCompile Include="Rendering\UnorderedAccessViewConfigDX11.cpp" />
+    <ClCompile Include="Rendering\UnorderedAccessViewDX11.cpp" />
+    <ClCompile Include="Rendering\VectorParameterDX11.cpp" />
+    <ClCompile Include="Rendering\VectorParameterWriterDX11.cpp" />
+    <ClCompile Include="Rendering\VertexBufferDX11.cpp" />
+    <ClCompile Include="Rendering\VertexElementDX11.cpp" />
+    <ClCompile Include="Rendering\VertexShaderDX11.cpp" />
+    <ClCompile Include="Rendering\VertexStageDX11.cpp" />
+    <ClCompile Include="Rendering\ViewAmbientOcclusion.cpp" />
+    <ClCompile Include="Rendering\ViewDepthNormal.cpp" />
+    <ClCompile Include="Rendering\ViewOcclusion.cpp" />
+    <ClCompile Include="Rendering\ViewPerspective.cpp" />
+    <ClCompile Include="Rendering\ViewPortDX11.cpp" />
+    <ClCompile Include="Rendering\ViewTextOverlay.cpp" />
+    <ClCompile Include="Rendering\VisualizerVertexDX11.cpp" />
+    <ClCompile Include="Rendering\VolumeTextureVertexDX11.cpp" />
+    <ClCompile Include="Scripting\Console.cpp" />
+    <ClCompile Include="Scripting\LuaApp.cpp" />
+    <ClCompile Include="Scripting\LuaGeometryActor.cpp" />
+    <ClCompile Include="Scripting\LuaScene.cpp" />
+    <ClCompile Include="Scripting\LuaTextActor.cpp" />
+    <ClCompile Include="Scripting\ScriptIntfActor.cpp" />
+    <ClCompile Include="Scripting\ScriptIntfApp.cpp" />
+    <ClCompile Include="Scripting\ScriptManager.cpp" />
+    <ClCompile Include="Utility\GlyphString.cpp" />
+    <ClCompile Include="Utility\Log.cpp" />
+    <ClCompile Include="Utility\PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Utility\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation\Animation.h" />
+    <ClInclude Include="Animation\AnimationStream.h" />
+    <ClInclude Include="Application\Application.h" />
+    <ClInclude Include="Application\ConsoleWindow.h" />
+    <ClInclude Include="Application\FileLoader.h" />
+    <ClInclude Include="Application\FileSystem.h" />
+    <ClInclude Include="Application\Glyphlet.h" />
+    <ClInclude Include="Application\IWindowProc.h" />
+    <ClInclude Include="Application\RenderApplication.h" />
+    <ClInclude Include="Application\RenderWindow.h" />
+    <ClInclude Include="Application\SingleWindowGlyphlet.h" />
+    <ClInclude Include="Application\Win32RenderWindow.h" />
+    <ClInclude Include="Events\EventManager.h" />
+    <ClInclude Include="Events\EvtChar.h" />
+    <ClInclude Include="Events\EvtErrorMessage.h" />
+    <ClInclude Include="Events\EvtFrameStart.h" />
+    <ClInclude Include="Events\EvtInfoMessage.h" />
+    <ClInclude Include="Events\EvtKeyboardMsg.h" />
+    <ClInclude Include="Events\EvtKeyDown.h" />
+    <ClInclude Include="Events\EvtKeyUp.h" />
+    <ClInclude Include="Events\EvtMouseLButtonDown.h" />
+    <ClInclude Include="Events\EvtMouseLButtonUp.h" />
+    <ClInclude Include="Events\EvtMouseLeave.h" />
+    <ClInclude Include="Events\EvtMouseMButtonDown.h" />
+    <ClInclude Include="Events\EvtMouseMButtonUp.h" />
+    <ClInclude Include="Events\EvtMouseMove.h" />
+    <ClInclude Include="Events\EvtMouseMsg.h" />
+    <ClInclude Include="Events\EvtMouseRButtonDown.h" />
+    <ClInclude Include="Events\EvtMouseRButtonUp.h" />
+    <ClInclude Include="Events\EvtMouseWheel.h" />
+    <ClInclude Include="Events\EvtWindowMsg.h" />
+    <ClInclude Include="Events\EvtWindowResize.h" />
+    <ClInclude Include="Events\IEvent.h" />
+    <ClInclude Include="Events\IEventListener.h" />
+    <ClInclude Include="Geometry\Box3f.h" />
+    <ClInclude Include="Geometry\CompositeShape.h" />
+    <ClInclude Include="Geometry\Cone3f.h" />
+    <ClInclude Include="Geometry\Frustum3f.h" />
+    <ClInclude Include="Geometry\LineIndices.h" />
+    <ClInclude Include="Geometry\Plane3f.h" />
+    <ClInclude Include="Geometry\PointIndices.h" />
+    <ClInclude Include="Geometry\Ray3f.h" />
+    <ClInclude Include="Geometry\Shape3D.h" />
+    <ClInclude Include="Geometry\Sphere3f.h" />
+    <ClInclude Include="Geometry\Triangle3f.h" />
+    <ClInclude Include="Geometry\TriangleIndices.h" />
+    <ClInclude Include="Intersection\Intersector.h" />
+    <ClInclude Include="Intersection\IntrRay3fBox3f.h" />
+    <ClInclude Include="Intersection\IntrRay3fSphere3f.h" />
+    <ClInclude Include="Mathematics\Matrix3f.h" />
+    <ClInclude Include="Mathematics\Matrix4f.h" />
+    <ClInclude Include="Mathematics\PerlinNoise.h" />
+    <ClInclude Include="Mathematics\Quaternion.h" />
+    <ClInclude Include="Mathematics\Tween.h" />
+    <ClInclude Include="Mathematics\Vector2f.h" />
+    <ClInclude Include="Mathematics\Vector3f.h" />
+    <ClInclude Include="Mathematics\Vector4f.h" />
+    <ClInclude Include="Objects\Actor.h" />
+    <ClInclude Include="Objects\ActorGenerator.h" />
+    <ClInclude Include="Objects\BoundsVisualizerActor.h" />
+    <ClInclude Include="Objects\Camera.h" />
+    <ClInclude Include="Objects\ConsoleActor.h" />
+    <ClInclude Include="Objects\Entity3D.h" />
+    <ClInclude Include="Objects\FirstPersonCamera.h" />
+    <ClInclude Include="Objects\FullscreenActor.h" />
+    <ClInclude Include="Objects\GeometryActor.h" />
+    <ClInclude Include="Objects\GlyphletActor.h" />
+    <ClInclude Include="Objects\IController.h" />
+    <ClInclude Include="Objects\Light.h" />
+    <ClInclude Include="Objects\Node3D.h" />
+    <ClInclude Include="Objects\ObjectSpaceCameraPositionWriter.h" />
+    <ClInclude Include="Objects\PickRecord.h" />
+    <ClInclude Include="Objects\PointLight.h" />
+    <ClInclude Include="Objects\PositionExtractorController.h" />
+    <ClInclude Include="Objects\RotationController.h" />
+    <ClInclude Include="Objects\Scene.h" />
+    <ClInclude Include="Objects\ScaleSetpointController.h" />
+    <ClInclude Include="Objects\SceneGraph.h" />
+    <ClInclude Include="Objects\SetpointController.h" />
+    <ClInclude Include="Objects\SkinnedActor.h" />
+    <ClInclude Include="Objects\SkinnedBoneController.h" />
+    <ClInclude Include="Objects\SkyboxActor.h" />
+    <ClInclude Include="Objects\SpatialController.h" />
+    <ClInclude Include="Objects\TextActor.h" />
+    <ClInclude Include="Objects\TextureActor.h" />
+    <ClInclude Include="Objects\TextureSpaceCameraPositionWriter.h" />
+    <ClInclude Include="Objects\TextureSpaceLightPositionWriter.h" />
+    <ClInclude Include="Objects\Transform3D.h" />
+    <ClInclude Include="Objects\VolumeActor.h" />
+    <ClInclude Include="Rendering\AttributeEvaluator2f.h" />
+    <ClInclude Include="Rendering\BasicVertexDX11.h" />
+    <ClInclude Include="Rendering\BlendStateConfigDX11.h" />
+    <ClInclude Include="Rendering\BufferConfigDX11.h" />
+    <ClInclude Include="Rendering\BufferDX11.h" />
+    <ClInclude Include="Rendering\ByteAddressBufferDX11.h" />
+    <ClInclude Include="Rendering\CommandListDX11.h" />
+    <ClInclude Include="Rendering\ComputeShaderDX11.h" />
+    <ClInclude Include="Rendering\ComputeStageDX11.h" />
+    <ClInclude Include="Rendering\ConstantBufferDX11.h" />
+    <ClInclude Include="Rendering\ConstantBufferParameterDX11.h" />
+    <ClInclude Include="Rendering\ConstantBufferParameterWriterDX11.h" />
+    <ClInclude Include="Rendering\ConeAttributes.h" />
+    <ClInclude Include="Rendering\D3DEnumConversion.h" />
+    <ClInclude Include="Rendering\DepthStencilStateConfigDX11.h" />
+    <ClInclude Include="Rendering\DepthStencilViewConfigDX11.h" />
+    <ClInclude Include="Rendering\DepthStencilViewDX11.h" />
+    <ClInclude Include="Rendering\DomainShaderDX11.h" />
+    <ClInclude Include="Rendering\DomainStageDX11.h" />
+    <ClInclude Include="Rendering\DrawExecutorDX11.h" />
+    <ClInclude Include="Rendering\DrawIndexedExecutorDX11.h" />
+    <ClInclude Include="Rendering\DrawIndexedInstancedExecutorDX11.h" />
+    <ClInclude Include="Rendering\DXGIAdapter.h" />
+    <ClInclude Include="Rendering\DXGIOutput.h" />
+    <ClInclude Include="Rendering\GeometryDX11.h" />
+    <ClInclude Include="Rendering\GeometryGeneratorDX11.h" />
+    <ClInclude Include="Rendering\GeometryLoaderDX11.h" />
+    <ClInclude Include="Rendering\GeometryShaderDX11.h" />
+    <ClInclude Include="Rendering\GeometryStageDX11.h" />
+    <ClInclude Include="Rendering\GridTessellator2f.h" />
+    <ClInclude Include="Rendering\HullShaderDX11.h" />
+    <ClInclude Include="Rendering\HullStageDX11.h" />
+    <ClInclude Include="Rendering\IndexBufferDX11.h" />
+    <ClInclude Include="Rendering\IndirectArgsBufferDX11.h" />
+    <ClInclude Include="Rendering\InputAssemblerStageDX11.h" />
+    <ClInclude Include="Rendering\InputAssemblerStateDX11.h" />
+    <ClInclude Include="Rendering\IParameterManager.h" />
+    <ClInclude Include="Rendering\IRenderer.h" />
+    <ClInclude Include="Rendering\MaterialDX11.h" />
+    <ClInclude Include="Rendering\MaterialGeneratorDX11.h" />
+    <ClInclude Include="Rendering\MaterialManager.h" />
+    <ClInclude Include="Rendering\MaterialTemplate.h" />
+    <ClInclude Include="Rendering\MatrixArrayParameterDX11.h" />
+    <ClInclude Include="Rendering\MatrixArrayParameterWriterDX11.h" />
+    <ClInclude Include="Rendering\MatrixParameterDX11.h" />
+    <ClInclude Include="Rendering\MatrixParameterWriterDX11.h" />
+    <ClInclude Include="Rendering\MeshMTL.h" />
+    <ClInclude Include="Rendering\MeshOBJ.h" />
+    <ClInclude Include="Rendering\MeshSTL.h" />
+    <ClInclude Include="Rendering\ms3dspec.h" />
+    <ClInclude Include="Rendering\MultiExecutorDX11.h" />
+    <ClInclude Include="Rendering\OutputMergerStageDX11.h" />
+    <ClInclude Include="Rendering\OutputMergerStageStateDX11.h" />
+    <ClInclude Include="Rendering\ParameterContainer.h" />
+    <ClInclude Include="Rendering\ParameterManagerDX11.h" />
+    <ClInclude Include="Rendering\ParameterWriter.h" />
+    <ClInclude Include="Rendering\PipelineExecutorDX11.h" />
+    <ClInclude Include="Rendering\PipelineManagerDX11.h" />
+    <ClInclude Include="Rendering\PixelShaderDX11.h" />
+    <ClInclude Include="Rendering\PixelStageDX11.h" />
+    <ClInclude Include="Rendering\RasterizerStageDX11.h" />
+    <ClInclude Include="Rendering\RasterizerStageStateDX11.h" />
+    <ClInclude Include="Rendering\RasterizerStateConfigDX11.h" />
+    <ClInclude Include="Rendering\Renderable.h" />
+    <ClInclude Include="Rendering\RenderEffectDX11.h" />
+    <ClInclude Include="Rendering\RendererDX11.h" />
+    <ClInclude Include="Rendering\RenderParameterDX11.h" />
+    <ClInclude Include="Rendering\RenderTargetViewConfigDX11.h" />
+    <ClInclude Include="Rendering\RenderTargetViewDX11.h" />
+    <ClInclude Include="Rendering\ResourceDX11.h" />
+    <ClInclude Include="Rendering\ResourceProxyDX11.h" />
+    <ClInclude Include="Rendering\SamplerParameterDX11.h" />
+    <ClInclude Include="Rendering\SamplerParameterWriterDX11.h" />
+    <ClInclude Include="Rendering\SamplerStateConfigDX11.h" />
+    <ClInclude Include="Rendering\SceneRenderTask.h" />
+    <ClInclude Include="Rendering\ShaderDX11.h" />
+    <ClInclude Include="Rendering\ShaderFactoryDX11.h" />
+    <ClInclude Include="Rendering\ShaderReflectionDX11.h" />
+    <ClInclude Include="Rendering\ShaderReflectionFactoryDX11.h" />
+    <ClInclude Include="Rendering\ShaderResourceParameterDX11.h" />
+    <ClInclude Include="Rendering\ShaderResourceParameterWriterDX11.h" />
+    <ClInclude Include="Rendering\ShaderResourceViewConfigDX11.h" />
+    <ClInclude Include="Rendering\ShaderResourceViewDX11.h" />
+    <ClInclude Include="Rendering\ShaderStageDX11.h" />
+    <ClInclude Include="Rendering\ShaderStageStateDX11.h" />
+    <ClInclude Include="Rendering\SpriteFontDX11.h" />
+    <ClInclude Include="Rendering\SpriteFontLoaderDX11.h" />
+    <ClInclude Include="Rendering\SpriteRendererDX11.h" />
+    <ClInclude Include="Rendering\SpriteVertexDX11.h" />
+    <ClInclude Include="Rendering\StreamOutputStageDX11.h" />
+    <ClInclude Include="Rendering\StreamOutputStageStateDX11.h" />
+    <ClInclude Include="Rendering\StructuredBufferDX11.h" />
+    <ClInclude Include="Rendering\SwapChainConfigDX11.h" />
+    <ClInclude Include="Rendering\SwapChainDX11.h" />
+    <ClInclude Include="Rendering\Task.h" />
+    <ClInclude Include="Rendering\Texture1dConfigDX11.h" />
+    <ClInclude Include="Rendering\Texture1dDX11.h" />
+    <ClInclude Include="Rendering\Texture2dConfigDX11.h" />
+    <ClInclude Include="Rendering\Texture2dDX11.h" />
+    <ClInclude Include="Rendering\Texture3dConfigDX11.h" />
+    <ClInclude Include="Rendering\Texture3dDX11.h" />
+    <ClInclude Include="Rendering\TexturedVertex.h" />
+    <ClInclude Include="Rendering\TGrowableBufferDX11.h" />
+    <ClInclude Include="Rendering\TGrowableIndexBufferDX11.h" />
+    <ClInclude Include="Rendering\TGrowableStructuredBufferDX11.h" />
+    <ClInclude Include="Rendering\TGrowableVertexBufferDX11.h" />
+    <ClInclude Include="Rendering\TStateArrayMonitor.h" />
+    <ClInclude Include="Rendering\TStateMonitor.h" />
+    <ClInclude Include="Rendering\UnorderedAccessParameterDX11.h" />
+    <ClInclude Include="Rendering\UnorderedAccessParameterWriterDX11.h" />
+    <ClInclude Include="Rendering\UnorderedAccessViewConfigDX11.h" />
+    <ClInclude Include="Rendering\UnorderedAccessViewDX11.h" />
+    <ClInclude Include="Rendering\VectorParameterDX11.h" />
+    <ClInclude Include="Rendering\VectorParameterWriterDX11.h" />
+    <ClInclude Include="Rendering\VertexBufferDX11.h" />
+    <ClInclude Include="Rendering\VertexElementDX11.h" />
+    <ClInclude Include="Rendering\VertexEvaluator2f.h" />
+    <ClInclude Include="Rendering\VertexShaderDX11.h" />
+    <ClInclude Include="Rendering\SphereAttributes.h" />
+    <ClInclude Include="Rendering\VertexStageDX11.h" />
+    <ClInclude Include="Rendering\ViewAmbientOcclusion.h" />
+    <ClInclude Include="Rendering\ViewDepthNormal.h" />
+    <ClInclude Include="Rendering\ViewOcclusion.h" />
+    <ClInclude Include="Rendering\ViewPerspective.h" />
+    <ClInclude Include="Rendering\ViewPortDX11.h" />
+    <ClInclude Include="Rendering\ViewTextOverlay.h" />
+    <ClInclude Include="Rendering\VisualizerVertexDX11.h" />
+    <ClInclude Include="Rendering\VolumeTextureVertexDX11.h" />
+    <ClInclude Include="Scripting\Console.h" />
+    <ClInclude Include="Scripting\IScriptInterface.h" />
+    <ClInclude Include="Scripting\LuaApp.h" />
+    <ClInclude Include="Scripting\LuaGeometryActor.h" />
+    <ClInclude Include="Scripting\LuaScene.h" />
+    <ClInclude Include="Scripting\LuaTextActor.h" />
+    <ClInclude Include="Scripting\ScriptIntfActor.h" />
+    <ClInclude Include="Scripting\ScriptIntfApp.h" />
+    <ClInclude Include="Scripting\ScriptManager.h" />
+    <ClInclude Include="Utility\GlyphString.h" />
+    <ClInclude Include="Utility\Log.h" />
+    <ClInclude Include="Utility\PCH.h" />
+    <ClInclude Include="Utility\TConfiguration.h" />
+    <ClInclude Include="Utility\Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Animation\AnimationStream.inl" />
+    <None Include="Mathematics\Quaternion.inl" />
+    <None Include="Mathematics\Tween.inl" />
+    <None Include="Objects\IController.inl" />
+    <None Include="Objects\PositionExtractorController.inl" />
+    <None Include="Objects\RotationController.inl" />
+    <None Include="Objects\ScaleSetpointController.inl" />
+    <None Include="Objects\SetpointController.inl" />
+    <None Include="Objects\SkinnedBoneController.inl" />
+    <None Include="Objects\SpatialController.inl" />
+    <None Include="Rendering\DrawExecutorDX11.inl" />
+    <None Include="Rendering\DrawIndexedExecutorDX11.inl" />
+    <None Include="Rendering\DrawIndexedInstancedExecutorDX11.inl" />
+    <None Include="Rendering\TGrowableBufferDX11.inl" />
+    <None Include="Rendering\TGrowableIndexBufferDX11.inl" />
+    <None Include="Rendering\TGrowableStructuredBufferDX11.inl" />
+    <None Include="Rendering\TGrowableVertexBufferDX11.inl" />
+    <None Include="Rendering\TStateArrayMonitor.inl" />
+    <None Include="Rendering\TStateMonitor.inl" />
+    <None Include="Utility\TConfiguration.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0F6D257E-70D5-46C5-8A12-7BDF93C35E81}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Hieroglyph3_Desktop</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <NuGetPackageImportStamp>8a4bad77</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\SDK\Library\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>Bin\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>Application;Mathematics;Scripting;Utility;Events;Rendering;Geometry;Intersection;Objects;Animation;$(SolutionDir)DirectXTK\Inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>MD ..\SDK\Include 
+copy Application\*.h ..\SDK\Include\
+copy Events\*.h ..\SDK\Include\
+copy Mathematics\*.h ..\SDK\Include\
+copy Mathematics\*.inl ..\SDK\Include\
+copy Scripting\*.h ..\SDK\Include\
+copy Utility\*.h ..\SDK\Include\
+copy Utility\*.inl ..\SDK\Include\
+copy Rendering\*.h ..\SDK\Include\
+copy Rendering\*.inl ..\SDK\Include\
+copy Geometry\*.h ..\SDK\Include\
+copy Intersection\*.h ..\SDK\Include\
+copy Objects\*.h ..\SDK\Include\
+copy Objects\*.inl ..\SDK\Include\
+copy Animation\*.h ..\SDK\Include\
+copy Animation\*.inl ..\SDK\Include\
+MD ..\..\Tutorials\bin 
+if "$(Platform)" == "Win32" (
+    echo "Hieroglyph3: Copying x86 version of D3DCompile*.dll to output bin folder."
+    copy “$(WindowsSdkDir)redist\d3d\x86\D3DCompile*.DLL” “..\..\Tutorials\bin\”
+) else (
+    echo "Hieroglyph3: Copying x64 version of D3DCompile*.dll to output bin folder."
+    copy “$(WindowsSdkDir)redist\d3d\x64\D3DCompile*.DLL” “..\..\Tutorials\bin\”
+)</Command>
+    </PostBuildEvent>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)Hieroglyph3\Dependencies\Lua-5.1.4\LuaLib\Bin\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lualib.lib</AdditionalDependencies>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+    <PreBuildEvent>
+      <Command>IF exist ..\SDK\Include (rd ..\SDK\Include) 
+IF exist ..\..\Tutorials\bin (rd ..\..\Tutorials\bin)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <!--<ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\directxtk.2.22.13.23\build\native\directxtk.targets" Condition="Exists('..\packages\directxtk.2.22.13.23\build\native\directxtk.targets')" />
+  </ImportGroup>-->
+  <!--<Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\directxtk.2.22.13.23\build\native\directxtk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\directxtk.2.22.13.23\build\native\directxtk.targets'))" />
+  </Target>-->
+</Project>
